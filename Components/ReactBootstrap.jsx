@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const ReactBootstrap = () => {
   return (
     <div className="flex flex-col items-center justify-center max-w-[1200px] mx-auto gap-[50px]">
+      
       <div className="flex items-center justify-center gap-2.5 mt-4">
         <Button variant="success">Login</Button>
         <Button variant="primary">Primary</Button>
