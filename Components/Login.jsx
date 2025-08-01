@@ -2,8 +2,8 @@ import React from "react";
 
 const Login = () => {
   return (
-    <div className="w-[80%] mx-auto grid grid-cols-2 items-center justify-center my-[50px]">
-      <div className=" p-[60px]">
+    <div className="w-[80%] mx-auto grid grid-cols-2 items-center justify-center my-[50px] max-xl:gap-[50px] max-md:flex max-md:flex-col">
+      <div className=" p-[60px] max-xl:p-[0px] flex flex-col justify-center">
         <h3>Welcome Back 👋</h3>
         <p className="max-w-[350px]">
           Today is a new day. It's your day. You shape it. Sign in to start
@@ -13,13 +13,13 @@ const Login = () => {
           <h6>Email</h6>
           <input
             type="text"
-            placeholder="Email"
+            placeholder="Example@email.com"
             className="border-gray-400 border-[1.5px] p-1 rounded-[5px] "
           />
           <h6>Password</h6>
           <input
             type="password"
-            placeholder="Password"
+            placeholder="At least 8 characters"
             className="border-gray-400 border-[1.5px] p-1 rounded-[5px] "
           />
           <span className="text-end text-blue-500">Forgot Password?</span>
@@ -43,11 +43,14 @@ const Login = () => {
               Sign in with Facebook
             </button>
           </div>
-          <p className="text-center mt-4">Do you have account?<a href="">Signup</a></p>
+          <p className="text-center mt-4 flex items-center justify-center gap-3">
+            <span>Do you have account?</span>
+            <a href="">Signup</a></p>
         </div>
       </div>
-      <div>
-        <img src="../public/Images/Art.png" alt="" />
+      <div className=" flex items-center justify-center">
+        {/* <img src="../public/Images/Art.png" alt="" /> */}
+        <img src="../public/Images/Art3.png" alt="" />
       </div>
     </div>
   );
