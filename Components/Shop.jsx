@@ -2,69 +2,71 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Networkstatus from "./SubComponents/Networkstatus";
 import Noconnection from "./SubComponents/Noconnection";
+import { Table, Container, Spinner } from "react-bootstrap";
 
 const Shop = () => {
-  //   const [products, setProducts] = useState([]);
-  //   useEffect(() => {
-  //     fetch("https://jsonplaceholder.typicode.com/posts")
-  //       .then((res) => res.json())
-  //       .then((data) => setProducts(data));
-  //   }, []);
-
-  //   return (
-  //     <div>
-  //       <h1>Shop</h1>
-  //       {products.map((post) => (
-  //         <span key={post.userId}>
-  //           <h1>{post.id}</h1>
-  //           {/* <h6>{post.userId}</h6> */}
-  //           <h2>{post.body}</h2>
-  //           <h3>{post.body}</h3>
-  //           <hr />
-  //         </span>
-  //       ))}
-  //     </div>
-  //   );
   const [data, setData] = useState([]);
-
   const Connection = Networkstatus();
-  // _____ For debugging _____
-  //   console.log('Connection: '+ navigator.onLine);
-  // console.log('status:  '+ Connection);
+  const [loading, setLoading] = useState(false);
 
-  // const [connection, setConnection] = useState(navigator.onLine);
-  // const connected = ()=>{setConnection(true)}
-  // const disconnected = ()=>{setConnection(false)}
-  // window.addEventListener('online',connected)
-  if (Connection) {
-    useEffect(() => {
+  useEffect(() => {
+    if (Connection) {
       fetch("https://jsonplaceholder.typicode.com/posts")
         .then((res) => res.json())
-        .then((data) => setData(data));
-    }, []);
-  } else {
-    return <Noconnection />;
-  }
+        .then((data) => {
+          setData(data);
+          setTimeout(() => {
+            setLoading(false);
+          }, 3000);
+        })
+        .catch(() => setLoading(false));
+    }
+  }, [Connection]);
+
+  window.addEventListener("load", function () {
+    console.log("loading...");
+
+    setLoading(true);
+  });
 
   return (
-    <div className="">
+    <div>
       {Connection ? (
-        <li className="text-green-700">you are online</li>
+        <Container dir="ltr">
+          <h1>Shop</h1>
+
+          {loading ? (
+            <div
+              className="d-flex justify-content-center align-items-center"
+              style={{ height: "200px" }}
+            >
+              <Spinner animation="border" role="status" />
+              <span className="ms-2">Loading...</span>
+            </div>
+          ) : (
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>title</th>
+                  <th>body</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.map((post) => (
+                  <tr key={post.id}>
+                    <td>{post.id}</td>
+                    <td>{post.title}</td>
+                    <td>{post.body}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          )}
+        </Container>
       ) : (
-        <li className="text-red-600">you are offline</li>
+        <Noconnection />
       )}
-      <div>
-        <h1>Shop</h1>
-        {data.map((post) => (
-          <span key={post.userId}>
-            <h1>{post.id}</h1>
-            {/* <h6>{post.userId}</h6> */}
-            <h2>{post.body}</h2>
-            <h3>{post.body}</h3>
-            <hr />
-          </span>
-        ))}
-      </div>
     </div>
   );
 };
