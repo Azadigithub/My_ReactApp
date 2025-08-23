@@ -15,9 +15,9 @@ const Shop = () => {
         .then((res) => res.json())
         .then((data) => {
           setData(data);
-          // setTimeout(() => {
-          //   setLoading(false);
-          // }, 3000);
+          setTimeout(() => {
+            setLoading(false);
+          }, 3000);
         })
         .catch(() => setLoading(false));
     }
