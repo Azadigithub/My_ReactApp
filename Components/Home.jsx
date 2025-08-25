@@ -4,6 +4,8 @@ import Shop from "./Shop";
 import { Link, useRoutes } from "react-router-dom";
 import Notfound from "./Notfound";
 import Header from "./SubComponents/Header";
+import Homeview from "./SubComponents/Homeview";
+
 const routes = [
   { path: "/" },
   { path: "/Login", element: <Login /> },
@@ -23,15 +25,15 @@ const Home = () => {
     //         <div className=" w-[50%]">
     //           <ul className=" flex items-center justify-evenly w-[100%] pt-[20px] ">
     //             <li className="px-[15px] py-[10px] bg-blue-500 rounded-[10px] text-white">
-                  
+
     //               Home
     //             </li>
     //             <li className="px-[15px] py-[10px] bg-blue-500 rounded-[10px] text-white">
-                  
+
     //               About us
     //             </li>
     //             <li className="px-[15px] py-[10px] bg-blue-500 rounded-[10px] text-white">
-                  
+
     //               Contact
     //             </li>
     //           </ul>
@@ -69,8 +71,21 @@ const Home = () => {
     //   {/* <div className="w-[600px] h-[600px] bg-blue-600 rounded-[90%] absolute left-[-100px] top-[-310px] z-[1]"></div> */}
     //   {router}
     // </div>
-    <div className="">
-      <Header/>
+    <div className="bg-My-gray-100">
+      <Header />
+      <main>
+        <div className="flex flex-col items-center justify-center">
+          <h1>Homes For You</h1>
+          <p>Based on your view history</p>
+        </div>
+        <div className="grid grid-cols-[repeat(3,minmax(350px,200px))] gap-[20px] items-center justify-center p-[40px]">
+          <Homeview/>
+          <Homeview/>
+          <Homeview/>
+          <Homeview/>
+          <Homeview/>
+        </div>
+      </main>
     </div>
   );
 };
