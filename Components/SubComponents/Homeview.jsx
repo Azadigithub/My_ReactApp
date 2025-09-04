@@ -3,45 +3,70 @@ import { LuBed } from "react-icons/lu";
 import { IoLocationOutline } from "react-icons/io5";
 import { PiBathtub } from "react-icons/pi";
 import { CgDisplayFullwidth } from "react-icons/cg";
-const Homeview = () => {
+
+const Homeview = ({
+  id,
+  title,
+  price,
+  image,
+  location,
+  bed,
+  bathroom,
+  sqft,
+  ForSale,
+}) => {
+  // let {title , price , image , location} = props
   return (
-    <div className="w-[350px] h-[300px] bg-white rounded-2xl">
-      <div className="flex h-[70%] items-start justify-start p-[15px] gap-[10px]">
-        <button className="w-[88px] h-[33px] bg-My-green-100 !rounded-2xl text-white">
-          For Sale
-        </button>
-        <button className="w-[88px] h-[33px] bg-My-yellow-100 !rounded-2xl">
-          Featured
-        </button>
+    <div className="relative w-[350px] h-[300px] bg-white rounded-2xl" key={id}>
+      <div className="flex h-[70%] items-start justify-start p-[15px] gap-[10px] ">
+        {ForSale && (
+          <button className="w-[88px] h-[33px] bg-My-green-100 z-2 !rounded-2xl text-white">
+            For Sale
+          </button>
+        )}
+        {!ForSale && 
+          <button className="w-[88px] h-[33px] z-2 bg-My-yellow-100 !rounded-2xl">
+            Featured
+          </button>
+        }
+        <div className="absolute top-0 left-0 w-full h-[75%] p-[10px]">
+          <img src={image} alt="" className="w-full h-full rounded-2xl" />
+        </div>
       </div>
       <div className="flex flex-col items-start justify-center p-[10px]">
         <div className="flex items-center justify-between w-full">
           <div className="">
-            <h5 className="m-0">Eaton Garth Penthouse</h5>
+            <h5 className="m-0">{title}</h5>
             <div className="flex items-center">
               <IoLocationOutline />
-              <p className="m-0">7722 18th Ave, Brooklyn</p>
+              <p className="m-0">{location}</p>
             </div>
           </div>
           <div className="">
-            <h6 className="!text-My-red-100">$180,000</h6>
+            <h6 className="!text-My-red-100">{price}</h6>
           </div>
         </div>
         <div className="flex items-start justify-between w-[70%]">
-          <div className="flex items-center justify-center text-[12px]">
-            <LuBed />4 Beds
+          <div className="flex items-center justify-center text-[12px] gap-[10px]">
+            <LuBed />
+            {bed}
           </div>
-          <div className="flex items-center justify-center text-[12px]">
-            <PiBathtub />2 Baths
+          <div className="flex items-center justify-center text-[12px] gap-[5px]">
+            <PiBathtub />
+            {bathroom}
           </div>
-          <div className="flex items-center justify-center text-[12px]">
+          <div className="flex items-center justify-center text-[12px] gap-[5px]">
             <CgDisplayFullwidth />
-            400 sqft
+            {sqft}
           </div>
         </div>
       </div>
     </div>
   );
+};
+
+Homeview.defaultProps = {
+  image: "../../public/Images/Homes/Home_2.jpg",
 };
 
 export default Homeview;

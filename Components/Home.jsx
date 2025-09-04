@@ -5,7 +5,40 @@ import { Link, useRoutes } from "react-router-dom";
 import Notfound from "./Notfound";
 import Header from "./SubComponents/Header";
 import Homeview from "./SubComponents/Homeview";
-
+const HomeInfows = [
+  {
+    id: 1,
+    title: "Eaton Garth Penthouse",
+    ForSale: true,
+    image: "../../public/Images/Homes/Home_1.jpg",
+    location: "7722 18th Ave, Brooklyn",
+    price: "$180,000",
+    bed: 4,
+    bathroom: 2,
+    sqft: 400,
+  },
+  {
+    id: 2,
+    title: "North Dillard Street",
+    ForSale: true,
+    image: "../../public/Images/Homes/Home_2.jpg",
+    location: "4330 Bell Shoals Rd",
+    price: "$250/month",
+    bed: 4,
+    bathroom: 3,
+    sqft: 400,
+  },
+  {
+    id: 3,
+    title: "Eaton Garth Penthouse",
+    image: "",
+    location: "7722 18th Ave, Brooklyn",
+    price: "$230,000",
+    bed: 3,
+    bathroom: 1,
+    sqft: 400,
+  },
+];
 const routes = [
   { path: "/" },
   { path: "/Login", element: <Login /> },
@@ -79,11 +112,18 @@ const Home = () => {
           <p>Based on your view history</p>
         </div>
         <div className="grid grid-cols-[repeat(3,minmax(350px,200px))] gap-[20px] items-center justify-center p-[40px]">
-          <Homeview/>
-          <Homeview/>
-          <Homeview/>
-          <Homeview/>
-          <Homeview/>
+          {HomeInfows.map((HomeInfow) => {
+            console.log('llll');
+            
+            <Homeview {...HomeInfow} />
+          })}
+          <Homeview {...HomeInfows[0]} />
+          <Homeview {...HomeInfows[1]} />
+          <Homeview {...HomeInfows[2]} />
+
+
+          {/* {HomeInfows.map(() => {
+          })} */}
         </div>
       </main>
     </div>
