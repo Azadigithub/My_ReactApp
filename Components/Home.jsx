@@ -5,6 +5,10 @@ import { Link, useRoutes } from "react-router-dom";
 import Notfound from "./Notfound";
 import Header from "./SubComponents/Header";
 import Homeview from "./SubComponents/Homeview";
+import { FaRegDotCircle } from "react-icons/fa";
+import { HiDotsHorizontal } from "react-icons/hi";
+import { RxDotFilled } from "react-icons/rx";
+
 const HomeInfows = [
   {
     id: 1,
@@ -104,27 +108,37 @@ const Home = () => {
     //   {/* <div className="w-[600px] h-[600px] bg-blue-600 rounded-[90%] absolute left-[-100px] top-[-310px] z-[1]"></div> */}
     //   {router}
     // </div>
-    <div className="bg-My-gray-100">
+    <div className="bg-white">
       <Header />
       <main>
         <div className="flex flex-col items-center justify-center">
           <h1>Homes For You</h1>
           <p>Based on your view history</p>
         </div>
-        <div className="grid grid-cols-[repeat(3,minmax(350px,200px))] gap-[20px] items-center justify-center p-[40px]">
-          {HomeInfows.map((HomeInfow) => {
+        {/* Home views  */}
+        <div className="">
+          {/* {HomeInfows.map((HomeInfow) => {
             console.log('llll');
             
             <Homeview {...HomeInfow} />
-          })}
-          <Homeview {...HomeInfows[0]} />
-          <Homeview {...HomeInfows[1]} />
-          <Homeview {...HomeInfows[2]} />
-
-
-          {/* {HomeInfows.map(() => {
           })} */}
+          <div className="flex flex-col bg-My-gray-100 items-center justify-center p-[40px] m-[20px] rounded-2xl gap-[40px]">
+            <div className="grid grid-cols-[repeat(3,minmax(350px,200px))]  gap-[20px] ">
+              <Homeview {...HomeInfows[0]} />
+              <Homeview {...HomeInfows[1]} />
+              <Homeview {...HomeInfows[2]} />
+            </div>
+            <div className="flex items-center justify-center gap-[5px] ">
+              <FaRegDotCircle />
+              {/* <HiDotsHorizontal /> */}
+              <RxDotFilled />
+              <RxDotFilled />
+              <RxDotFilled />
+              <RxDotFilled />
+            </div>
+          </div>
         </div>
+        {/* Find Properties in These Cities */}
       </main>
     </div>
   );
