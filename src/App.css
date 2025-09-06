@@ -21,9 +21,12 @@ a{
   /* --color-midnight: #121063; */
   /* --color-tahiti: #3ab7bf; */
   --color-My-yellow-100: #E7C873;
+  --color-My-yellow-200: #FFF8F6;
+  --color-My-yellow-300: #E7C873;
   --color-My-gray-100: #E9E9E9;
   --color-My-green-100: #1F4B43;
   --color-My-red-100: #EB664E;
+  --color-My-black-100: #1A1A1A;
 
   --color-my-gray-50: oklch(0.984 0.003 247.858);
   /* --color-gray-100: oklch(0.968 0.007 247.896);

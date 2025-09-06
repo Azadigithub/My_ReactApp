@@ -1,0 +1,10 @@
+
+
+1-npm install @react-google-maps/api
+
+npm uninstall @react-google-maps/api
+
+
+
+
+2-npm install react-leaflet leaflet
