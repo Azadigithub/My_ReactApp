@@ -8,6 +8,7 @@ import Homeview from "./SubComponents/Homeview";
 import { FaRegDotCircle } from "react-icons/fa";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { RxDotFilled } from "react-icons/rx";
+import Mymap from "./SubComponents/Mymap";
 
 const HomeInfows = [
   {
@@ -162,6 +163,10 @@ const Home = () => {
               <img src="../public/Images/Cities/City_6.png" alt="" className="w-full h-full rounded-[10px]"/>
             </div>
           </div>
+        </div>
+        <div className="max-w-[90%] mx-auto">
+
+        <Mymap/>
         </div>
       </main>
     </div>
