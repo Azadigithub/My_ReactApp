@@ -139,6 +139,30 @@ const Home = () => {
           </div>
         </div>
         {/* Find Properties in These Cities */}
+                <div className="flex flex-col items-center justify-center">
+          <h1>Find Properties in These Cities</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div className=" grid grid-cols-4 items-center justify-center gap-4 m-[30px]">
+            <div className=" h-[300px] col-span-2 rounded-[10px]">
+              <img src="../public/Images/Cities/c1.jpg.png" alt="" className="w-full h-full rounded-[10px]"/>
+            </div>
+            <div className="  h-[300px] rounded-[10px]">
+              <img src="../public/Images/Cities/c2.jpg.png" alt="" className="w-full h-full rounded-[10px]"/>
+            </div>
+            <div className="h-[300px] rounded-[10px]">
+              <img src="../public/Images/Cities/c3.jpg.png" alt="" className="w-full h-full rounded-[10px]"/>
+            </div>
+            <div className="h-[300px] rounded-[10px]">
+              <img src="../public/Images/Cities/c4.jpg.png" alt="" className="w-full h-full rounded-[10px]"/>
+            </div>
+            <div className=" h-[300px] rounded-[10px]">
+              <img src="../public/Images/Cities/City_5.png" alt="" className="w-full h-full rounded-[10px]"/>
+            </div>
+            <div className="h-[300px] col-span-2 rounded-[10px]">
+              <img src="../public/Images/Cities/City_6.png" alt="" className="w-full h-full rounded-[10px]"/>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   );
