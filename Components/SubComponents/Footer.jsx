@@ -36,10 +36,11 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex items-center justify-end gap-[50px] p-[20px]">
-            <FaSquareFacebook className="bg-white" />
-            <FaTwitter className="bg-white" />
-            <PiInstagramLogoFill className="bg-white" />
-            <RiLinkedinFill className="bg-white" />
+            <h6 className="text-white">Follow Us</h6>
+            <FaSquareFacebook className="bg-white" size={30} />
+            <FaTwitter className="bg-white" size={30} />
+            <PiInstagramLogoFill className="bg-white" size={30} />
+            <RiLinkedinFill className="bg-white" size={30} />
           </div>
         </div>
 
