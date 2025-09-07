@@ -92,6 +92,7 @@ const routes = [
 const Home = () => {
   const router = useRoutes(routes);
   return (
+
     <div className="bg-white">
       <Header />
       <main>
