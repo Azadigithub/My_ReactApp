@@ -8,7 +8,6 @@ import Homeview from "./SubComponents/Homeview";
 import { FaRegDotCircle } from "react-icons/fa";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { RxDotFilled } from "react-icons/rx";
-import Mymap from "./SubComponents/Mymap";
 import Footer from "./SubComponents/Footer";
 
 const HomeInfows = [

@@ -24,29 +24,29 @@ const Header = () => {
           <img src="../public/Images/logo-white.png" alt="" />
         </div>
         <nav className="w-[50%]">
-          <ul className="Menu flex items-center justify-evenly w-full m-0">
+          <ul className="Menu flex items-center justify-center gap-[30px] w-full m-0">
             <li>
-              <a href="/" className="text-white ">
+              <a href="/" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
                 Home
               </a>
             </li>
             <li>
-              <a href="/about" className="text-white ">
+              <a href="/about" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black! ">
                 Listings
               </a>
             </li>
             <li>
-              <a href="/contact" className="text-white ">
+              <a href="/contact" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
                 Members
               </a>
             </li>
             <li>
-              <a href="/contact" className="text-white ">
+              <a href="/contact" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
                 Blog
               </a>
             </li>
             <li>
-              <a href="/Shop" className="text-white ">
+              <a href="/Shop" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
                 Shop
               </a>
             </li>
