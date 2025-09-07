@@ -75,7 +75,7 @@ const Header = () => {
         </div>
       </div>
       <div className="absolute top-[200px] flex flex-col items-center justify-center gap-[20px]">
-        <button className="border-white text-white border-[1px] p-[5px] !rounded-[10px] px-[20px] py-[10px] hover:bg-white hover:text-red-600">
+        <button className="border-white text-white border-[1px] p-[5px] px-[20px] py-[10px] hover:bg-white hover:text-black!">
           LET US GUIDE YOUR HOME
         </button>
         <h2 className="text-white">Discover a place you'll love to live</h2>
