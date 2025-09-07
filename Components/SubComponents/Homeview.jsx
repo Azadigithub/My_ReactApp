@@ -14,6 +14,7 @@ const Homeview = ({
   bathroom,
   sqft,
   ForSale,
+  Featured,
 }) => {
   // let {title , price , image , location} = props
   return (
@@ -24,7 +25,7 @@ const Homeview = ({
             For Sale
           </button>
         )}
-        {!ForSale && 
+        {Featured && 
           <button className="w-[88px] h-[33px] z-2 bg-My-yellow-100 !rounded-2xl">
             Featured
           </button>
@@ -36,7 +37,7 @@ const Homeview = ({
       <div className="flex flex-col items-start justify-center p-[10px]">
         <div className="flex items-center justify-between w-full">
           <div className="">
-            <h5 className="m-0">{title}</h5>
+            <h6 className="m-0">{title}</h6>
             <div className="flex items-center">
               <IoLocationOutline />
               <p className="m-0">{location}</p>
