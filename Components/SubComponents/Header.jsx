@@ -51,12 +51,12 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="/contact" className="text-white ">
+              <a href="/contact" className="bg-white text-black p-[10px] rounded-2xl">
                 Pages
               </a>
             </li>
             <li>
-              <Link to="/contact" className="text-white ">
+              <Link to="/contact" className="bg-white text-black p-[10px] rounded-2xl">
                 Contact
               </Link>
             </li>
