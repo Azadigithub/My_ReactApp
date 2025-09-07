@@ -1,10 +1,14 @@
 
-
 1-npm install @react-google-maps/api
-
 npm uninstall @react-google-maps/api
 
-
-
-
 2-npm install react-leaflet leaflet
+
+3-
+# golobal installation
+    npm install -g json-server
+# Local installation (In Project Files)
+    npm install json-server --save-dev
+
+// # run server
+    json-server --watch db.json --port 5000

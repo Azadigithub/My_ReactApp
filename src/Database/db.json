@@ -1,0 +1,15 @@
+{
+  "users": [
+    { "id": 1, "name": "Ali", "age": 25 },
+    { "id": 2, "name": "Sara", "age": 30 },
+    { "id": 3, "name": "Amir", "age": 25, "image": "https://i.pravatar.cc/150?img=1" },
+    { "id": 4, "name": "Reza", "age": 30, "image": "https://i.pravatar.cc/150?img=2" }
+  ],
+  "posts": [
+    { "id": 1, "title": "Hello World", "body": "This is my first post" }
+  ]
+
+
+}
+
+
