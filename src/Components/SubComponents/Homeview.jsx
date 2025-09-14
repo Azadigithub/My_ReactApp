@@ -31,7 +31,7 @@ const Homeview = ({
           </button>
         }
         <div className="absolute top-0 left-0 w-full h-[75%] p-[10px]">
-          <img src={image} alt="" className="w-full h-full rounded-2xl" />
+          <img src={image}   loading="lazy" alt="" className="w-full h-full rounded-2xl" />
         </div>
       </div>
       <div className="flex flex-col items-start justify-center p-[10px]">

@@ -90,6 +90,78 @@ const Home = () => {
       bathroom: 3,
       sqft: 400,
     },
+    {
+      id: 7,
+      title: "Eaton Garth Penthouse",
+      ForSale: true,
+      Featured: true,
+      image: "../../public/Images/Homes/Home_7.jpg",
+      location: "7722 18th Ave, Brooklyn",
+      price: "$140,000",
+      bed: 4,
+      bathroom: 3,
+      sqft: 400,
+    },
+    {
+      id: 8,
+      title: "Eaton Garth Penthouse",
+      ForSale: false,
+      Featured: true,
+      image: "../../public/Images/Homes/Home_8.jpg",
+      location: "7722 18th Ave, Brooklyn",
+      price: "$140,000",
+      bed: 4,
+      bathroom: 3,
+      sqft: 400,
+    },
+    {
+      id: 9,
+      title: "Eaton Garth Penthouse",
+      ForSale: true,
+      Featured: true,
+      image: "../../public/Images/Homes/Home_9.jpg",
+      location: "7722 18th Ave, Brooklyn",
+      price: "$140,000",
+      bed: 4,
+      bathroom: 3,
+      sqft: 400,
+    },
+    {
+      id: 10,
+      title: "Eaton Garth Penthouse",
+      ForSale: false,
+      Featured: true,
+      image: "../../public/Images/Homes/Home_10.jpg",
+      location: "7722 18th Ave, Brooklyn",
+      price: "$140,000",
+      bed: 4,
+      bathroom: 3,
+      sqft: 400,
+    },
+    {
+      id: 11,
+      title: "Eaton Garth Penthouse",
+      ForSale: true,
+      Featured: true,
+      image: "../../public/Images/Homes/Home_11.jpg",
+      location: "7722 18th Ave, Brooklyn",
+      price: "$140,000",
+      bed: 4,
+      bathroom: 3,
+      sqft: 400,
+    },
+    {
+      id: 12,
+      title: "Eaton Garth Penthouse",
+      ForSale: true,
+      Featured: false,
+      image: "../../public/Images/Homes/Home_12.jpg",
+      location: "7722 18th Ave, Brooklyn",
+      price: "$140,000",
+      bed: 4,
+      bathroom: 3,
+      sqft: 400,
+    },
   ];
   const [allHomes] = useState(Homedata);
   const [homeInfows, setHomeInfows] = useState(Homedata);
@@ -177,7 +249,7 @@ const Home = () => {
               {homeInfows.map((item) => (
                 <Homeview key={item.id} {...item} />
               ))}
-              
+
             </div>
             <div className="flex items-center justify-center gap-[5px] ">
               <FaRegDotCircle />
