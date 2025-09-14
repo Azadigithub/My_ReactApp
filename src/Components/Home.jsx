@@ -189,7 +189,7 @@ const Home = () => {
   const router = useRoutes(routes);
   return (
     <div className="bg-white">
-      <Header />
+      <Header image='../../public/Images/Header_images/elements.png'/>
       <main>
         <div className="flex flex-col items-center justify-center">
           <h1>Homes For You</h1>
@@ -269,7 +269,7 @@ const Home = () => {
               <img
                 src="../public/Images/Cities/c1.jpg.png"
                 alt=""
-                className="w-full h-full rounded-[10px]"
+                className="w-full h-full rounded-[10px] "
               />
             </div>
             <div className="  h-[300px] rounded-[10px]">
@@ -304,7 +304,7 @@ const Home = () => {
               <img
                 src="../public/Images/Cities/City_6.png"
                 alt=""
-                className="w-full h-full rounded-[10px]"
+                className="w-full h-full rounded-[10px]  "
               />
             </div>
           </div>

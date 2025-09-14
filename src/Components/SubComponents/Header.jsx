@@ -2,11 +2,15 @@ import React from "react";
 import { LuPhone } from "react-icons/lu";
 import { IoPersonOutline } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
-import Shop from "../Shop";
+// import Shop from "../Shop";
 import { Link, useRoutes } from "react-router-dom";
-const routes = [{ path: "/" }, { path: "/ُShop", element: <Shop /> }];
+const routes = [
+  { path: "/" },
+  //  { path: "/ُShop", element: <Shop /> },
+    
+   ];
 
-const Header = () => {
+const Header = (props) => {
   const router = useRoutes(routes);
 
   return (
@@ -14,7 +18,7 @@ const Header = () => {
       {/* <h1>Header</h1> */}
       <div className="w-full maxh-[858px] relative p-[20px]">
         <img
-          src="../../public/Images/Header_images/elements.png"
+          src={props.image}
           alt=""
           className="w-full"
         />
@@ -31,17 +35,17 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="/about" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black! ">
-                Listings
+              <a href="/Contact" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black! ">
+                Contact
               </a>
             </li>
             <li>
-              <a href="/contact" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
+              <a href="/members" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
                 Members
               </a>
             </li>
             <li>
-              <a href="/contact" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
+              <a href="/blog" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
                 Blog
               </a>
             </li>
@@ -51,13 +55,13 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="/contact" className="bg-white text-black p-[10px] rounded-2xl">
-                Pages
+              <a href="/Login" className="bg-white text-black p-[10px] rounded-2xl">
+                Log in
               </a>
             </li>
             <li>
-              <Link to="/contact" className="bg-white text-black p-[10px] rounded-2xl">
-                Contact
+              <Link to="/Signin" className="bg-white text-black p-[10px] rounded-2xl">
+                Sign in
               </Link>
             </li>
           </ul>

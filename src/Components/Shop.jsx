@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Networkstatus from "./SubComponents/Networkstatus";
 import Noconnection from "./SubComponents/Noconnection";
 import { Table, Container, Spinner } from "react-bootstrap";
+import Header from "./SubComponents/Header";
 
 const Shop = () => {
   const [data, setData] = useState([]);
@@ -44,6 +45,7 @@ const Shop = () => {
 
   return (
     <div>
+      <Header  image='../../public/Images/Header_images/element2.jpg'/>
       {Connection ? (
         <Container dir="ltr">
           <h1>Shop</h1>
