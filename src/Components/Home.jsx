@@ -8,81 +8,8 @@ import { FaRegDotCircle } from "react-icons/fa";
 import { RxDotFilled } from "react-icons/rx";
 import Footer from "./SubComponents/Footer";
 import { FaArrowRight } from "react-icons/fa6";
+import { useState } from "react";
 
-const HomeInfows = [
-  {
-    id: 1,
-    title: "Eaton Garth Penthouse",
-    ForSale: true,
-    Featured: false,
-    image: "../../public/Images/Homes/Home_1.jpg",
-    location: "7722 18th Ave, Brooklyn",
-    price: "$180,000",
-    bed: 4,
-    bathroom: 2,
-    sqft: 400,
-  },
-  {
-    id: 2,
-    title: "North Dillard Street",
-    ForSale: true,
-    Featured: false,
-    image: "../../public/Images/Homes/Home_2.jpg",
-    location: "4330 Bell Shoals Rd",
-    price: "$250/month",
-    bed: 4,
-    bathroom: 3,
-    sqft: 400,
-  },
-  {
-    id: 3,
-    title: "Luxury Family Home",
-    ForSale: true,
-    Featured: true,
-    image: "../../public/Images/Homes/Home_3.png",
-    location: "1800-1818 79th St",
-    price: "$395,000",
-    bed: 4,
-    bathroom: 4,
-    sqft: 450,
-  },
-  {
-    id: 4,
-    title: "Diamond Manor Apartment",
-    ForSale: true,
-    Featured: true,
-    image: "../../public/Images/Homes/Home_4.png",
-    location: "7802 20th Ave, Brooklyn",
-    price: "$259,000",
-    bed: 4,
-    bathroom: 2,
-    sqft: 400,
-  },
-  {
-    id: 5,
-    title: "New Apartment Nice Wiew",
-    ForSale: true,
-    Featured: false,
-    image: "../../public/Images/Homes/Home_5.png",
-    location: "42 Avenue O, Brooklyn",
-    price: "$850/month",
-    bed: 3,
-    bathroom: 1,
-    sqft: 460,
-  },
-  {
-    id: 6,
-    title: "Eaton Garth Penthouse",
-    ForSale: true,
-    Featured: true,
-    image: "../../public/Images/Homes/Home_6.png",
-    location: "7722 18th Ave, Brooklyn",
-    price: "$140,000",
-    bed: 4,
-    bathroom: 3,
-    sqft: 400,
-  },
-];
 const routes = [
   { path: "/" },
   { path: "/Login", element: <Login /> },
@@ -90,9 +17,105 @@ const routes = [
   { path: "*", element: <Notfound /> },
 ];
 const Home = () => {
+  const Homedata = [
+    {
+      id: 1,
+      title: "Eaton Garth Penthouse",
+      ForSale: true,
+      Featured: false,
+      image: "../../public/Images/Homes/Home_1.jpg",
+      location: "7722 18th Ave, Brooklyn",
+      price: "$180,000",
+      bed: 4,
+      bathroom: 2,
+      sqft: 400,
+    },
+    {
+      id: 2,
+      title: "North Dillard Street",
+      ForSale: true,
+      Featured: false,
+      image: "../../public/Images/Homes/Home_2.jpg",
+      location: "4330 Bell Shoals Rd",
+      price: "$250/month",
+      bed: 4,
+      bathroom: 3,
+      sqft: 400,
+    },
+    {
+      id: 3,
+      title: "Luxury Family Home",
+      ForSale: false,
+      Featured: true,
+      image: "../../public/Images/Homes/Home_3.png",
+      location: "1800-1818 79th St",
+      price: "$395,000",
+      bed: 4,
+      bathroom: 4,
+      sqft: 450,
+    },
+    {
+      id: 4,
+      title: "Diamond Manor Apartment",
+      ForSale: true,
+      Featured: true,
+      image: "../../public/Images/Homes/Home_4.png",
+      location: "7802 20th Ave, Brooklyn",
+      price: "$259,000",
+      bed: 4,
+      bathroom: 2,
+      sqft: 400,
+    },
+    {
+      id: 5,
+      title: "New Apartment Nice Wiew",
+      ForSale: true,
+      Featured: false,
+      image: "../../public/Images/Homes/Home_5.png",
+      location: "42 Avenue O, Brooklyn",
+      price: "$850/month",
+      bed: 3,
+      bathroom: 1,
+      sqft: 460,
+    },
+    {
+      id: 6,
+      title: "Eaton Garth Penthouse",
+      ForSale: false,
+      Featured: true,
+      image: "../../public/Images/Homes/Home_6.png",
+      location: "7722 18th Ave, Brooklyn",
+      price: "$140,000",
+      bed: 4,
+      bathroom: 3,
+      sqft: 400,
+    },
+  ];
+  const [allHomes] = useState(Homedata);
+  const [homeInfows, setHomeInfows] = useState(Homedata);
+  const [activebuttons, setActivebuttons] = useState("All");
+
+  const ForSaleHandler = () => {
+    const filtered = allHomes.filter((item) => item.ForSale);
+    // console.log(filtered);
+    setHomeInfows(filtered);
+    setActivebuttons("sale");
+  };
+  const ForRentHandler = () => {
+    const filtered = allHomes.filter((item) => item.Featured);
+    // console.log(filtered);
+    setHomeInfows(filtered);
+    // console.log("Rent");
+    setActivebuttons("Rent");
+  };
+  const AllHomesHandler = () => {
+    setHomeInfows(allHomes);
+    // console.log("All");
+    setActivebuttons("All");
+  };
+
   const router = useRoutes(routes);
   return (
-
     <div className="bg-white">
       <Header />
       <main>
@@ -117,18 +140,44 @@ const Home = () => {
               <div className="flex items-center justify-center gap-[10px]">
                 {/* <h6>View All Cities</h6>
                 <FaArrowRight size={14} /> */}
-                <button className="border-black border-1 p-2 bg-My-yellow-50 rounded-2xl!">All Properties</button>
-                <button className="p-2">For Sale</button>
-                <button className="p-2">For Rent</button>
+                {/* bg-My-yellow-50 border-black border-1 rounded-2xl! */}
+                <button
+                  onClick={AllHomesHandler}
+                  className={`hover:cursor-pointer ${
+                    activebuttons === "All"
+                      ? "bg-My-yellow-50 border-black border-1 rounded-2xl! p-2"
+                      : "p-2"
+                  }`}
+                >
+                  All Properties
+                </button>
+                <button
+                  onClick={ForSaleHandler}
+                  className={`hover:cursor-pointer ${
+                    activebuttons === "sale"
+                      ? "bg-My-yellow-50 border-black border-1 rounded-2xl! p-2"
+                      : "p-2"
+                  }`}
+                >
+                  For Sale
+                </button>
+                <button
+                  onClick={ForRentHandler}
+                  className={`hover:cursor-pointer ${
+                    activebuttons === "Rent"
+                      ? "bg-My-yellow-50 border-black border-1 rounded-2xl! p-2"
+                      : "p-2"
+                  }`}
+                >
+                  For Rent
+                </button>
               </div>
             </div>
             <div className="grid grid-cols-[repeat(3,minmax(350px,200px))]  gap-[20px] ">
-              <Homeview {...HomeInfows[0]} />
-              <Homeview {...HomeInfows[1]} />
-              <Homeview {...HomeInfows[2]} />
-              <Homeview {...HomeInfows[3]} />
-              <Homeview {...HomeInfows[4]} />
-              <Homeview {...HomeInfows[5]} />
+              {homeInfows.map((item) => (
+                <Homeview key={item.id} {...item} />
+              ))}
+              
             </div>
             <div className="flex items-center justify-center gap-[5px] ">
               <FaRegDotCircle />

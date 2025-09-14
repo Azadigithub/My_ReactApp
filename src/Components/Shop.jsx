@@ -9,30 +9,30 @@ const Shop = () => {
   const Connection = Networkstatus();
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (loading) {
-      fetch("https://fakestoreapi.com/products")
-        .then((res) => res.json())
-        .then((data) => {
-          setData(data);
-          setTimeout(() => {
-            setLoading(false);
-          }, 3000);
-        })
-        .catch(() => setLoading(false));
-    }
-    // if (loading) {
-    //   fetch("https://jsonplaceholder.typicode.com/posts")
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //       setData(data);
-    //       // setTimeout(() => {
-    //       //   setLoading(false);
-    //       // }, 3000);
-    //     })
-    //     .catch(() => setLoading(false));
-    // }
-  }, []);
+  // useEffect(() => {
+  //   if (loading) {
+  //     fetch("https://fakestoreapi.com/products")
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         setData(data);
+  //         setTimeout(() => {
+  //           setLoading(false);
+  //         }, 3000);
+  //       })
+  //       .catch(() => setLoading(false));
+  //   }
+  //   // if (loading) {
+  //   //   fetch("https://jsonplaceholder.typicode.com/posts")
+  //   //     .then((res) => res.json())
+  //   //     .then((data) => {
+  //   //       setData(data);
+  //   //       // setTimeout(() => {
+  //   //       //   setLoading(false);
+  //   //       // }, 3000);
+  //   //     })
+  //   //     .catch(() => setLoading(false));
+  //   // }
+  // }, []);
 
   window.addEventListener("load", function () {
     console.log("loading...");
