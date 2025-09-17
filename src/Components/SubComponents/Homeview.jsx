@@ -18,7 +18,7 @@ const Homeview = ({
 }) => {
   // let {title , price , image , location} = props
   return (
-    <div className="relative w-[350px] h-[300px] bg-white rounded-2xl" key={id}>
+    <div className="relative w-[350px] h-[300px] bg-white rounded-2xl hover:cursor-pointer" key={id}>
       <div className="flex h-[70%] items-start justify-start p-[15px] gap-[10px] ">
         {ForSale && (
           <button className="w-[88px] h-[33px] bg-My-green-100 z-2 !rounded-2xl text-white">

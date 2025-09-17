@@ -30,34 +30,34 @@ const Header = (props) => {
         <nav className="w-[50%]">
           <ul className="Menu flex items-center justify-center gap-[30px] w-full m-0">
             <li>
-              <a href="/" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
+              <Link to="/" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/Contact" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black! ">
+              <Link to="/Contact" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black! ">
                 Contact
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/members" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
+              <Link to="/members" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
                 Members
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/blog" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
+              <Link to="/blog" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
                 Blog
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/Shop" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
+              <Link to="/Shop" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
                 Shop
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/Login" className="bg-white text-black p-[10px] rounded-2xl">
+              <Link to="/Login" className="bg-white text-black p-[10px] rounded-2xl">
                 Log in
-              </a>
+              </Link>
             </li>
             <li>
               <Link to="/Signin" className="bg-white text-black p-[10px] rounded-2xl">

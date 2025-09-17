@@ -45,7 +45,7 @@ const Shop = () => {
 
   return (
     <div>
-      <Header  image='../../public/Images/Header_images/element2.jpg'/>
+      <Header  image='../../public/Images/Header_images/element3.jpg'/>
       {Connection ? (
         <Container dir="ltr">
           <h1>Shop</h1>
