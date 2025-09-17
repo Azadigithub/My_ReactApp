@@ -1,6 +1,6 @@
 import Login from "./Login";
 import Shop from "./Shop";
-import { useRoutes } from "react-router-dom";
+import { Link, useRoutes } from "react-router-dom";
 import Notfound from "./Notfound";
 import Header from "./SubComponents/Header";
 import Homeview from "./SubComponents/Homeview";
@@ -10,11 +10,15 @@ import Footer from "./SubComponents/Footer";
 import { FaArrowRight } from "react-icons/fa6";
 import { useState } from "react";
 import Homedetails from "./SubComponents/Homedetails";
+import { LineUtil } from "leaflet";
+import Details from "./SubComponents/Details";
 
 const routes = [
   { path: "/" },
   { path: "/Login", element: <Login /> },
-  { path: "/ُShop", element: <Shop /> },
+  { path: "/Shop", element: <Shop /> },
+  { path: "/Details", element: <Details /> },
+  // { path: "/detials", element: <Homedetails/> },
   { path: "*", element: <Notfound /> },
 ];
 const Home = () => {
@@ -172,6 +176,12 @@ const Home = () => {
     const filtered = allHomes.filter((item) => item.ForSale);
     // console.log(filtered);
     setHomeInfows(filtered);
+    // const preve = setHomeInfows((preveState)=>{
+    //   console.log(preveState);
+    //   return preveState
+    // });
+    // console.log(preve);
+
     setActivebuttons("sale");
   };
   const ForRentHandler = () => {
@@ -190,7 +200,7 @@ const Home = () => {
   const router = useRoutes(routes);
   return (
     <div className="bg-white">
-      <Header image='../../public/Images/Header_images/elements.png'/>
+      <Header image="../../public/Images/Header_images/elements.png" />
       <main>
         <div className="flex flex-col items-center justify-center">
           <h1>Homes For You</h1>
@@ -248,9 +258,10 @@ const Home = () => {
             </div>
             <div className="grid grid-cols-[repeat(3,minmax(350px,200px))]  gap-[20px] ">
               {homeInfows.map((item) => (
-                <Homeview key={item.id} {...item} />
+                <Link to={`/detials`} >
+                  <Homeview key={item.id} {...item} />
+                </Link>
               ))}
-
             </div>
             <div className="flex items-center justify-center gap-[5px] ">
               <FaRegDotCircle />

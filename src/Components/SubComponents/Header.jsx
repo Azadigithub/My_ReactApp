@@ -7,8 +7,7 @@ import { Link, useRoutes } from "react-router-dom";
 const routes = [
   { path: "/" },
   //  { path: "/ُShop", element: <Shop /> },
-    
-   ];
+];
 
 const Header = (props) => {
   const router = useRoutes(routes);
@@ -17,11 +16,7 @@ const Header = (props) => {
     <div className="flex flex-col items-center justify-center">
       {/* <h1>Header</h1> */}
       <div className="w-full maxh-[858px] relative p-[20px]">
-        <img
-          src={props.image}
-          alt=""
-          className="w-full"
-        />
+        <img src={props.image} alt="" className="w-full rounded-2xl" />
       </div>
       <div className="flex items-center justify-between w-full mt-[30px] absolute top-[30px] ">
         <div className="w-[15%] flex justify-center p-[30px]">
@@ -30,37 +25,64 @@ const Header = (props) => {
         <nav className="w-[50%]">
           <ul className="Menu flex items-center justify-center gap-[30px] w-full m-0">
             <li>
-              <Link to="/" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
+              <Link
+                to="/"
+                className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!"
+              >
                 Home
+              </Link>
+              <Link
+                to="/Details"
+                className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!"
+              >
+                det
               </Link>
             </li>
             <li>
-              <Link to="/Contact" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black! ">
+              <Link
+                to="/Contact"
+                className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black! "
+              >
                 Contact
               </Link>
             </li>
             <li>
-              <Link to="/members" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
+              <Link
+                to="/members"
+                className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!"
+              >
                 Members
               </Link>
             </li>
             <li>
-              <Link to="/blog" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
+              <Link
+                to="/blog"
+                className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!"
+              >
                 Blog
               </Link>
             </li>
             <li>
-              <Link to="/Shop" className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!">
+              <Link
+                to="/Shop"
+                className="text-white hover:bg-white p-[10px] rounded-2xl  hover:text-black!"
+              >
                 Shop
               </Link>
             </li>
             <li>
-              <Link to="/Login" className="bg-white text-black p-[10px] rounded-2xl">
+              <Link
+                to="/Login"
+                className="bg-white text-black p-[10px] rounded-2xl"
+              >
                 Log in
               </Link>
             </li>
             <li>
-              <Link to="/Signin" className="bg-white text-black p-[10px] rounded-2xl">
+              <Link
+                to="/Signin"
+                className="bg-white text-black p-[10px] rounded-2xl"
+              >
                 Sign in
               </Link>
             </li>

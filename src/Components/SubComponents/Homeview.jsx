@@ -16,22 +16,34 @@ const Homeview = ({
   ForSale,
   Featured,
 }) => {
+  const HomeDetailsViewer = (Id) => {
+    console.log(Id);
+  };
   // let {title , price , image , location} = props
   return (
-    <div className="relative w-[350px] h-[300px] bg-white rounded-2xl hover:cursor-pointer" key={id}>
+    <div
+      onClick={() => HomeDetailsViewer(id)}
+      className="relative w-[350px] h-[300px] bg-white rounded-2xl hover:cursor-pointer"
+      key={id}
+    >
       <div className="flex h-[70%] items-start justify-start p-[15px] gap-[10px] ">
         {ForSale && (
           <button className="w-[88px] h-[33px] bg-My-green-100 z-2 !rounded-2xl text-white">
             For Sale
           </button>
         )}
-        {Featured && 
+        {Featured && (
           <button className="w-[88px] h-[33px] z-2 bg-My-yellow-100 !rounded-2xl">
             Featured
           </button>
-        }
+        )}
         <div className="absolute top-0 left-0 w-full h-[75%] p-[10px]">
-          <img src={image}   loading="lazy" alt="" className="w-full h-full rounded-2xl " />
+          <img
+            src={image}
+            loading="lazy"
+            alt=""
+            className="w-full h-full rounded-2xl "
+          />
         </div>
       </div>
       <div className="flex flex-col items-start justify-center p-[10px]">
