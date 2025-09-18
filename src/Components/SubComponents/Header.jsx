@@ -13,14 +13,14 @@ const Header = (props) => {
   const router = useRoutes(routes);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className={`flex flex-col items-center justify-center min-h-[200px]`}>
       {/* <h1>Header</h1> */}
       <div className="w-full maxh-[858px] relative p-[20px]">
         <img src={props.image} alt="" className="w-full rounded-2xl" />
       </div>
-      <div className="flex items-center justify-between w-full mt-[30px] absolute top-[30px] ">
+      <div className="flex items-center justify-evenly w-full mt-[30px] absolute top-[30px] ">
         <div className="w-[15%] flex justify-center p-[30px]">
-          <img src="../public/Images/logo-white.png" alt="" />
+          <img src="/Images/logo-white.png" alt="" />
         </div>
         <nav className="w-[50%]">
           <ul className="Menu flex items-center justify-center gap-[30px] w-full m-0">
@@ -89,7 +89,7 @@ const Header = (props) => {
           </ul>
         </nav>
 
-        <div className="flex items-center justify-center w-[30%] gap-[10px] text-white">
+        <div className="flex items-center justify-center gap-[10px] text-white ">
           <LuPhone />
           <h6 className="m-0">+68 685 88666</h6>
           <button className="border-white border-[1px] p-[5px] !rounded-[100px]">

@@ -277,42 +277,42 @@ const Home = () => {
           <div className=" grid grid-cols-4 items-center justify-center gap-4 m-[30px]">
             <div className=" h-[300px] col-span-2 rounded-[10px]">
               <img
-                src="../public/Images/Cities/c1.jpg.png"
+                src="/Images/Cities/c1.jpg.png"
                 alt=""
                 className="w-full h-full rounded-[10px] "
               />
             </div>
             <div className="  h-[300px] rounded-[10px]">
               <img
-                src="../public/Images/Cities/c2.jpg.png"
+                src="/Images/Cities/c2.jpg.png"
                 alt=""
                 className="w-full h-full rounded-[10px]"
               />
             </div>
             <div className="h-[300px] rounded-[10px]">
               <img
-                src="../public/Images/Cities/c3.jpg.png"
+                src="/Images/Cities/c3.jpg.png"
                 alt=""
                 className="w-full h-full rounded-[10px]"
               />
             </div>
             <div className="h-[300px] rounded-[10px]">
               <img
-                src="../public/Images/Cities/c4.jpg.png"
+                src="/Images/Cities/c4.jpg.png"
                 alt=""
                 className="w-full h-full rounded-[10px]"
               />
             </div>
             <div className=" h-[300px] rounded-[10px]">
               <img
-                src="../public/Images/Cities/City_5.png"
+                src="/Images/Cities/City_5.png"
                 alt=""
                 className="w-full h-full rounded-[10px]"
               />
             </div>
             <div className="h-[300px] col-span-2 rounded-[10px]">
               <img
-                src="../public/Images/Cities/City_6.png"
+                src="/Images/Cities/City_6.png"
                 alt=""
                 className="w-full h-full rounded-[10px]  "
               />
