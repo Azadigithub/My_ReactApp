@@ -23,7 +23,7 @@ const Homeview = ({
   return (
     <div
       onClick={() => HomeDetailsViewer(id)}
-      className="relative w-[350px] h-[300px] bg-white rounded-2xl hover:cursor-pointer"
+      className="relative w-[315px] h-[270px] xxt:w-[400px] xxt:h-[310px] xxx:w-[330px] xxx:h-[250px] smd:w-[400px] smd:h-[300px] xxs:w-[430px]  xxs:h-[330px] bg-white rounded-2xl hover:cursor-pointer"
       key={id}
     >
       <div className="flex h-[70%] items-start justify-start p-[15px] gap-[10px] ">

@@ -190,21 +190,20 @@ const Home = () => {
   return (
     <div className="bg-white">
       <Header image="/Images/Header_images/elements.png" />
-            <main>
+      <main>
         <div className="flex flex-col items-center justify-center">
           <h1>Homes For You</h1>
           <p>Based on your view history</p>
         </div>
         {/* Home views  */}
         <div className="">
-
-          <div className="flex flex-col bg-My-gray-100 items-center justify-center p-[40px] m-[20px] rounded-2xl gap-[40px]">
-            <div className="flex w-[70%] items-center justify-between">
+          <div className="flex flex-col bg-My-gray-100 items-center justify-center py-[40px] px-[15px] rounded-2xl gap-[40px]">
+            <div className="flex flex-col xxx:flex-row w-[70%] items-center justify-between gap-[40px] ">
               <div className="flex flex-col ">
                 <h1>Featured Properties</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
-              <div className="flex items-center justify-center gap-[10px]">
+              <div className="flex  flex-col xss:flex-row items-center justify-center gap-[40px]">
                 {/* <h6>View All Cities</h6>
                 <FaArrowRight size={14} /> */}
                 {/* bg-My-yellow-50 border-black border-1 rounded-2xl! */}
@@ -240,9 +239,9 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className="grid grid-cols-[repeat(3,minmax(350px,200px))]  gap-[20px] ">
+            <div className="grid grid-cols-[repeat(1,minmax(320px,270px))] xxt:grid-cols-[repeat(1,minmax(400px,300px))] xxx:grid-cols-[repeat(2,minmax(340px,240px))] sss:grid-cols-[repeat(2,minmax(380px,280px))] smd:grid-cols-[repeat(2,minmax(400px,300px))] xxs:grid-cols-[repeat(3,minmax(430px,330px))]  gap-[20px] ">
               {homeInfows.map((item) => (
-                <Link to={`/Detials`} >
+                <Link to={`/Detials`}>
                   <Homeview key={item.id} {...item} />
                 </Link>
               ))}

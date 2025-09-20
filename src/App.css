@@ -43,8 +43,11 @@ a{
 
 */
   --breakpoint-xxs: 1400px;
+  --breakpoint-smd: 1250px;
   --breakpoint-xss: 1000px;
-  --breakpoint-sss: 850px;
+  --breakpoint-sss: 900px;
+  --breakpoint-xxx: 700px;
+  --breakpoint-xxt: 500px;
   --breakpoint-Mobile: 360px;
   /* --breakpoint-sss: 900px; */
   /* --breakpoint-2xl: 100rem; */
