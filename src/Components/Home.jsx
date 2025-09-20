@@ -1,7 +1,6 @@
 import Login from "./Login";
 import Shop from "./Shop";
 import { Link, useRoutes } from "react-router-dom";
-import Notfound from "./Notfound";
 import Header from "./SubComponents/Header";
 import Homeview from "./SubComponents/Homeview";
 import { FaRegDotCircle } from "react-icons/fa";
@@ -12,13 +11,6 @@ import { useState } from "react";
 import Homedetails from "./SubComponents/Homedetails";
 import { LineUtil } from "leaflet";
 
-const routes = [
-  { path: "/" },
-  { path: "/Login", element: <Login /> },
-  { path: "/Shop", element: <Shop /> },
-  // { path: "/detials", element: <Homedetails/> },
-  { path: "*", element: <Notfound /> },
-];
 const Home = () => {
   const Homedata = [
     {
@@ -195,22 +187,16 @@ const Home = () => {
     setActivebuttons("All");
   };
 
-  const router = useRoutes(routes);
   return (
     <div className="bg-white">
       <Header image="/Images/Header_images/elements.png" />
-      <main>
+            <main>
         <div className="flex flex-col items-center justify-center">
           <h1>Homes For You</h1>
           <p>Based on your view history</p>
         </div>
         {/* Home views  */}
         <div className="">
-          {/* {HomeInfows.map((HomeInfow) => {
-            console.log('llll');
-            
-            <Homeview {...HomeInfow} />
-          })} */}
 
           <div className="flex flex-col bg-My-gray-100 items-center justify-center p-[40px] m-[20px] rounded-2xl gap-[40px]">
             <div className="flex w-[70%] items-center justify-between">
@@ -256,7 +242,7 @@ const Home = () => {
             </div>
             <div className="grid grid-cols-[repeat(3,minmax(350px,200px))]  gap-[20px] ">
               {homeInfows.map((item) => (
-                <Link to={`/detials`} >
+                <Link to={`/Detials`} >
                   <Homeview key={item.id} {...item} />
                 </Link>
               ))}
@@ -321,7 +307,7 @@ const Home = () => {
         </div>
         <div className="max-w-[90%] mx-auto"></div>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

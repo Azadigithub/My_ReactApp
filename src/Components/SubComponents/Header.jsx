@@ -4,26 +4,24 @@ import { IoPersonOutline } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
 // import Shop from "../Shop";
 import { Link, useRoutes } from "react-router-dom";
-const routes = [
-  { path: "/" },
-  //  { path: "/ُShop", element: <Shop /> },
-];
 
 const Header = (props) => {
-  const router = useRoutes(routes);
-
   return (
     <div className={`flex flex-col items-center justify-center min-h-[200px]`}>
       {/* <h1>Header</h1> */}
-      <div className="w-full maxh-[858px] relative p-[20px]">
-        <img src={props.image} alt="" className="w-full rounded-2xl" />
+      <div className="w-full relative p-[20px] h-[90vh]">
+        <img
+          src={props.image}
+          alt=""
+          className="w-full h-full rounded-2xl object-cover "
+        />
       </div>
       <div className="flex items-center justify-evenly w-full mt-[30px] absolute top-[30px] ">
-        <div className="w-[15%] flex justify-center p-[30px]">
+        <div className="hidden xss:flex justify-center w-[15%]">
           <img src="/Images/logo-white.png" alt="" />
         </div>
-        <nav className="w-[50%]">
-          <ul className="Menu flex items-center justify-center gap-[30px] w-full m-0">
+        <div className="">
+          <ul className="Menu hidden sss:flex items-center justify-center gap-[30px] w-full m-0 ">
             <li>
               <Link
                 to="/"
@@ -87,9 +85,9 @@ const Header = (props) => {
               </Link>
             </li>
           </ul>
-        </nav>
+        </div>
 
-        <div className="flex items-center justify-center gap-[10px] text-white ">
+        <div className="hidden xxs:flex items-center justify-center gap-[10px] text-white ">
           <LuPhone />
           <h6 className="m-0">+68 685 88666</h6>
           <button className="border-white border-[1px] p-[5px] !rounded-[100px]">
@@ -100,23 +98,25 @@ const Header = (props) => {
           </button>
         </div>
       </div>
-      <div className="absolute top-[200px] flex flex-col items-center justify-center gap-[20px]">
+      <div className="w-full absolute top-[200px] flex flex-col items-center justify-center gap-[20px]">
         <button className="border-white text-white border-[1px] p-[5px] px-[20px] py-[10px] hover:bg-white hover:text-black!">
           LET US GUIDE YOUR HOME
         </button>
         <h2 className="text-white">Discover a place you'll love to live</h2>
-        <div className="flex w-[690px] h-[70px] mt-[150px] bg-white rounded-[50px] pl-[30px] p-[10px]">
+        <div
+          className="flex w-[50%] h-[40px] xss:h-[70px] xxs:mt-[150px] Mobile:h-[60px]
+         bg-white rounded-[50px] pl-[30px] p-[10px]"
+        >
           <input
             type="text"
             placeholder="Enter Name, Keywords..."
-            className="w-full h-full outline-0 "
+            className="w-full h-full outline-0 text-[12px]"
           />
-          <button className="border-none bg-My-yellow-100 p-[5px] !rounded-[100px] px-[20px]">
+          <button className="hidden border-none bg-My-yellow-100 p-[5px] !rounded-[100px] px-[20px]">
             <CiSearch />
           </button>
         </div>
       </div>
-      {router}
     </div>
   );
 };

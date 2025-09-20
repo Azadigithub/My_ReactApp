@@ -79,7 +79,7 @@ const Homeview = ({
 };
 
 Homeview.defaultProps = {
-  image: "../../public/Images/Homes/Home_2.jpg",
+  image: "/Images/Homes/Home_2.jpg",
 };
 
 export default Homeview;
