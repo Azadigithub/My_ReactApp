@@ -306,7 +306,7 @@ const Home = () => {
         </div>
         <div className="max-w-[90%] mx-auto"></div>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

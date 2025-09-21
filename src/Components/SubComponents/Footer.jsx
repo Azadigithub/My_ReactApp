@@ -28,7 +28,7 @@ const Footer = () => {
       </div>
 
       <div className="bg-My-black-100 flex flex-col">
-        <div className="flex items-center justify-between px-[100px] py-[50px] border-b-2 border-white">
+        <div className="flex flex-col xss:flex-row items-center justify-between px-[100px] py-[50px] border-b-2 border-white">
           <div className="text-white">
             <h3 className="text-xl font-bold mb-2 ">JustHome</h3>
             <p className="mb-4 text-sm">
@@ -37,14 +37,17 @@ const Footer = () => {
           </div>
           <div className="flex items-center justify-end gap-[50px] p-[20px]">
             <h6 className="text-white">Follow Us</h6>
+            <div className="flex items-center justify-center w-full gap-5 flex-wrap">
             <FaSquareFacebook className="bg-white" size={30} />
             <FaTwitter className="bg-white" size={30} />
             <PiInstagramLogoFill className="bg-white" size={30} />
             <RiLinkedinFill className="bg-white" size={30} />
+
+            </div>
           </div>
         </div>
 
-        <div className="flex items-start justify-evenly p-[20px]">
+        <div className="flex flex-wrap items-start justify-evenly p-[20px] gap-[50px]">
           {/* Discover */}
           <div className="text-white">
             <h4 className="mb-2 ">Discover</h4>
