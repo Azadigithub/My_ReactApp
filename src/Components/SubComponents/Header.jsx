@@ -12,8 +12,8 @@ const Header = (props) => {
       <div className="w-full relative p-[20px] h-[90vh]">
         <img
           src={props.image}
-          alt=""
-          className="w-full h-full rounded-2xl object-cover "
+          alt="Home"
+          className="w-full h-full rounded-2xl object-cover object-[-330px] xxt:object-[-268px] xxx:object-[-165px] xss:object-[0]"
         />
       </div>
       <div className="flex items-center justify-evenly w-full mt-[30px] absolute top-[30px] ">
@@ -110,7 +110,7 @@ const Header = (props) => {
           <input
             type="text"
             placeholder="Enter Name, Keywords..."
-            className="w-full h-full outline-0 text-[12px]"
+            className="w-full h-full outline-0 text-[12px] xss:text-[18px]"
           />
           <button className="hidden border-none bg-My-yellow-100 p-[5px] !rounded-[100px] px-[20px]">
             <CiSearch />
