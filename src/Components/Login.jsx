@@ -33,13 +33,13 @@ const Login = () => {
           </div>
           <div className="mt-4">
             <button className=" bg-gray-200 rounded p-1 w-full flex items-center justify-center gap-2">
-              <img src="../public/Images/Google.png" alt="" />
+              <img src="/Images/Google.png" alt="" />
               Sign in with Google
             </button>
           </div>
           <div className=" mt-2">
             <button className=" bg-gray-200 rounded p-1 w-full flex items-center justify-center gap-2 ">
-              <img src="../public/Images/Facebook.png" alt="" />
+              <img src="/Images/Facebook.png" alt="" />
               Sign in with Facebook
             </button>
           </div>
