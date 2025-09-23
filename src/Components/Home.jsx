@@ -10,7 +10,13 @@ import { FaArrowRight } from "react-icons/fa6";
 import { useState } from "react";
 import Homedetails from "./SubComponents/Homedetails";
 import { LineUtil } from "leaflet";
-
+import City from "./SubComponents/City";
+const Cities = [
+  {image:'/Images/Cities/c1.jpg.png', alt:'' , colcolapan: true},
+  {image:'/Images/Cities/c2.jpg.png', alt:''},
+  {image:'/Images/Cities/c3.jpg.png', alt:''},
+  {image:'/Images/Cities/c4.jpg.png', alt:''},
+]
 const Home = () => {
   const Homedata = [
     {
@@ -260,6 +266,10 @@ const Home = () => {
           <h1>Find Properties in These Cities</h1>
           <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <div className=" grid grid-cols-1 xss:grid-cols-4 items-center justify-center gap-4 m-[30px]">
+            {/* <City {...Cities[0]}/>
+            <City {...Cities[1]}/>
+            <City {...Cities[2]}/>
+            <City {...Cities[3]}/> */}
             <div className="h-[170px] xxt:h-[220px] xxx:h-[320px] xss:h-[400px] col-span-2 rounded-[10px]">
               <img
                 src="/Images/Cities/c1.jpg.png"
