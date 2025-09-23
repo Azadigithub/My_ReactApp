@@ -7,12 +7,13 @@ import Home from "./Components/Home";
 import Notfound from "./Components/Notfound";
 import Users from "./Users";
 import Details from "./Components/Details";
+import Header from "./Components/SubComponents/Header";
 
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/Login", element: <Login /> },
   { path: "/Shop", element: <Shop /> },
-  { path: "/Details", element: <Details /> },
+  { path: "/Details/:id", element: <Details /> },
   { path: "*", element: <Notfound /> },
 ];
 
@@ -20,8 +21,6 @@ function App() {
   const router = useRoutes(routes);
   return (
     <>
-      {/* <Users /> */}
-      {/* <ReactBootstrap/> */}
       {router}
     </>
   );
