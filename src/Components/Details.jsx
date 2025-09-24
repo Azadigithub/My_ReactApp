@@ -122,10 +122,10 @@ const Details = () => {
                   </label>
                   <select className="w-full border rounded px-3 py-2 text-sm">
                     <option>All</option>
-                    <option>تهران</option>
-                    <option>مشهد</option>
-                    <option>اصفهان</option>
-                    <option>شیراز</option>
+                    <option>Paris</option>
+                    <option>Marseille</option>
+                    <option>Lille</option>
+                    <option>Rouen</option>
                   </select>
                 </div>
 
