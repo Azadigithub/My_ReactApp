@@ -8,15 +8,14 @@ import { RxDotFilled } from "react-icons/rx";
 import Footer from "./SubComponents/Footer";
 import { FaArrowRight } from "react-icons/fa6";
 import { useState } from "react";
-import Homedetails from "./SubComponents/Homedetails";
 import { LineUtil } from "leaflet";
 import City from "./SubComponents/City";
 const Cities = [
-  {image:'/Images/Cities/c1.jpg.png', alt:'' , colcolapan: true},
-  {image:'/Images/Cities/c2.jpg.png', alt:''},
-  {image:'/Images/Cities/c3.jpg.png', alt:''},
-  {image:'/Images/Cities/c4.jpg.png', alt:''},
-]
+  { image: "/Images/Cities/c1.jpg.png", alt: "", colcolapan: true },
+  { image: "/Images/Cities/c2.jpg.png", alt: "" },
+  { image: "/Images/Cities/c3.jpg.png", alt: "" },
+  { image: "/Images/Cities/c4.jpg.png", alt: "" },
+];
 export const Homedata = [
   {
     id: 1,
@@ -29,6 +28,7 @@ export const Homedata = [
     bed: 4,
     bathroom: 2,
     sqft: 400,
+    MoreImages: ["/Images/Homes/Home_1.jpg", "/Images/Homes/Home_1.jpg"],
   },
   {
     id: 2,
@@ -41,6 +41,7 @@ export const Homedata = [
     bed: 4,
     bathroom: 3,
     sqft: 400,
+    MoreImages: ["/Images/Homes/Home_2.jpg", "/Images/Homes/Home_2.jpg"],
   },
   {
     id: 3,
@@ -53,6 +54,7 @@ export const Homedata = [
     bed: 4,
     bathroom: 4,
     sqft: 450,
+    MoreImages: ["/Images/Homes/Home_3.png", "/Images/Homes/Home_3.png"],
   },
   {
     id: 4,
@@ -65,6 +67,7 @@ export const Homedata = [
     bed: 4,
     bathroom: 2,
     sqft: 400,
+    MoreImages: ["/Images/Homes/Home_4.png", "/Images/Homes/Home_4.png"],
   },
   {
     id: 5,
@@ -77,6 +80,7 @@ export const Homedata = [
     bed: 3,
     bathroom: 1,
     sqft: 460,
+        MoreImages: ["/Images/Homes/Home_5.png", "/Images/Homes/Home_5.png"],
   },
   {
     id: 6,
@@ -89,6 +93,7 @@ export const Homedata = [
     bed: 4,
     bathroom: 3,
     sqft: 400,
+        MoreImages: ["/Images/Homes/Home_6.png", "/Images/Homes/Home_6.png"],
   },
   {
     id: 7,
@@ -101,6 +106,7 @@ export const Homedata = [
     bed: 4,
     bathroom: 3,
     sqft: 400,
+        MoreImages: ["/Images/Homes/Home_7.jpg", "/Images/Homes/Home_7.jpg"],
   },
   {
     id: 8,
@@ -113,6 +119,7 @@ export const Homedata = [
     bed: 3,
     bathroom: 3,
     sqft: 400,
+        MoreImages: ["/Images/Homes/Home_8.jpg", "/Images/Homes/Home_8.jpg"],
   },
   {
     id: 9,
@@ -125,6 +132,7 @@ export const Homedata = [
     bed: 2,
     bathroom: 3,
     sqft: 400,
+        MoreImages: ["/Images/Homes/Home_9.jpg", "/Images/Homes/Home_9.jpg"],
   },
   {
     id: 10,
@@ -137,6 +145,7 @@ export const Homedata = [
     bed: 2,
     bathroom: 1,
     sqft: 400,
+        MoreImages: ["/Images/Homes/Home_10.jpg", "/Images/Homes/Home_10.jpg"],
   },
   {
     id: 11,
@@ -247,7 +256,7 @@ const Home = () => {
             </div>
             <div className="grid grid-cols-[repeat(1,minmax(320px,270px))] xxt:grid-cols-[repeat(1,minmax(400px,300px))] xxx:grid-cols-[repeat(2,minmax(340px,240px))] sss:grid-cols-[repeat(2,minmax(380px,280px))] smd:grid-cols-[repeat(2,minmax(400px,300px))] xxs:grid-cols-[repeat(3,minmax(430px,330px))]  gap-[20px] ">
               {homeInfows.map((item) => (
-                <Link to={`/Details/${item.id}`}>
+                <Link to={`/Details/${item.id}`} key={item.id} >
                   <Homeview key={item.id} {...item} />
                 </Link>
               ))}
@@ -264,7 +273,9 @@ const Home = () => {
         {/* Find Properties in These Cities */}
         <div className="flex flex-col items-center justify-center">
           <h1>Find Properties in These Cities</h1>
-          <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p className="text-center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
           <div className=" grid grid-cols-1 xss:grid-cols-4 items-center justify-center gap-4 m-[30px]">
             {/* <City {...Cities[0]}/>
             <City {...Cities[1]}/>
@@ -276,35 +287,35 @@ const Home = () => {
                 alt=""
                 className="w-full h-full rounded-[10px] "
               />
-            </div> 
+            </div>
             <div className="h-[170px] xxt:h-[220px] xxx:h-[320px] xss:h-[400px] rounded-[10px]">
               <img
                 src="/Images/Cities/c2.jpg.png"
                 alt=""
                 className="w-full h-full rounded-[10px]"
               />
-            </div> 
+            </div>
             <div className="h-[170px] xxt:h-[220px] xxx:h-[320px] xss:h-[400px] rounded-[10px]">
               <img
                 src="/Images/Cities/c3.jpg.png"
                 alt=""
                 className="w-full h-full rounded-[10px]"
               />
-            </div> 
+            </div>
             <div className="h-[170px] xxt:h-[220px] xxx:h-[320px] xss:h-[400px] rounded-[10px]">
               <img
                 src="/Images/Cities/c4.jpg.png"
                 alt=""
                 className="w-full h-full rounded-[10px]"
               />
-            </div> 
+            </div>
             <div className="h-[170px] xxt:h-[220px] xxx:h-[320px] xss:h-[400px] rounded-[10px]">
               <img
                 src="/Images/Cities/City_5.png"
                 alt=""
                 className="w-full h-full rounded-[10px]"
               />
-            </div> 
+            </div>
             <div className="h-[170px] xxt:h-[220px] xxx:h-[320px] xss:h-[400px] col-span-2 rounded-[10px]">
               <img
                 src="/Images/Cities/City_6.png"

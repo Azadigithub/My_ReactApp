@@ -15,6 +15,7 @@ const Homeview = ({
   sqft,
   ForSale,
   Featured,
+  MoreImages,
 }) => {
   const HomeDetailsViewer = (Id) => {
     console.log(Id);
